@@ -1,12 +1,12 @@
-def bubble_sort(num_list):
-    for i in range(len(num_list)-1,0,-1):
-        for j in range(i):
-            if num_list[j] > num_list[j+1]:
-                temp = num_list[j]
-                num_list[j] = num_list[j+1]
-                num_list[j+1] = temp
+# def bubble_sort(num_list):
+#     for i in range(len(num_list)-1,0,-1):
+#         for j in range(i):
+#             if num_list[j] > num_list[j+1]:
+#                 temp = num_list[j]
+#                 num_list[j] = num_list[j+1]
+#                 num_list[j+1] = temp
 
-    return num_list
+#     return num_list
 
 
 # def bubble_sort(arr):
@@ -26,27 +26,42 @@ def bubble_sort(num_list):
 # 	print(arr)
 
 
-def search(num_list,value):
-	# value_idx = 0
-	for x in range(len(num_list)) :
-		# print(x)
-		# if value in num_list:
-		# 	# print(x)
-		# 	value_idx = num_list[x]
-		# 	print(value_idx)
-		# 	return True
+# def search(num_list,value):
+# 	# value_idx = 0
+# 	for x in range(len(num_list)) :
+# 		# print(x)
+# 		# if value in num_list:
+# 		# 	# print(x)
+# 		# 	value_idx = num_list[x]
+# 		# 	print(value_idx)
+# 		# 	return True
 
-		if value in num_list :
-			print(num_list[x])
-			return True
+# 		if value in num_list :
+# 			print(num_list[x])
+# 			return True
 			
-		else:
-			return False
+# 		else:
+# 			return False
 
 
-num_list = [17, 5, 12, 4, 95, 32, 7, 1]
+def bubble_sort(seq):
+	l = len(seq)
+	k = l
+	for i in range(l):
+		print(i,"i")
+		for j in range(1,k):
+			print(j,"j")
+			if seq[j] < seq[j-1]:
+				seq[j],seq[j-1] = seq[j-1],seq[j]
+		k-=1
+		print(k,"k-")
+	return seq
+
+
+num_list = [17, 5, 12, 4, 95, 111, 32, 7, 1]
 get_sorted = bubble_sort(num_list)
 print(f"The Sorted list for the list is : {get_sorted} ")
 
-search_list = search(num_list,5)
-print(search_list)
+# search_list = search(num_list,5)
+# print(search_list)
+

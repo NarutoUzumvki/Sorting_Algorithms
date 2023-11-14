@@ -37,3 +37,4 @@ print(get_sorted2)
 
 get_merged = merge(seq1, seq2)
 print(get_merged)
+ get_merged
